@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="relative">
     <Navbar />
-    <main className=" flex flex-col w-full bg-[#FBFAF8]">
+    <main className="pt-[86px] flex flex-col w-full bg-[#FBFAF8]">
       <Outlet/>
     </main>
       <Footer/>

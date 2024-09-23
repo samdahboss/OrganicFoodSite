@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="lg:w-1/2 flex flex-col gap-6">
           <img
             src="/organic-store-white-logo.png"
-            className="w-[200px] mx-auto md:mr-auto"
+            className="w-[200px] mx-auto lg:mx-0"
             alt="Logo"
           />
           <div className="flex mb-6 lg:mb-0">
