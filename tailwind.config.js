@@ -7,6 +7,7 @@ export default {
     extend: {
       colors: {
         greenColor: "#A1CF6D",
+        darkGreenColor: "#6A9739",
       },
       fontFamily: {
         merriweather: ['Merriweather', 'serif'],
