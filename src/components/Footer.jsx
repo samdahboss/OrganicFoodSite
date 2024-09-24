@@ -26,8 +26,8 @@ export default function Footer() {
   const appImages = ["/play-store.png", "/app-store.png"];
 
   return (
-    <div className="footer py-24 px-6 bg-black text-gray-400">
-      <div className="flex flex-col lg:flex-row text-center md:text-left justify-between">
+    <div className="footer flex justify-center py-24 px-6 bg-black text-gray-400">
+      <div className="flex flex-col lg:flex-row text-center md:text-left container justify-between">
         <div className="lg:w-1/2 flex flex-col gap-6">
           <img
             src="/organic-store-white-logo.png"

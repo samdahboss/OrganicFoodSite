@@ -43,8 +43,8 @@ export default function Navbar() {
     }
   }
   return (
-    <div className="w-full flex flex-col pt-4 lg:py-4 fixed z-40 bg-white">
-      <div className="flex-1 w-full flex gap-4 px-6">
+    <div className="w-full flex justify-center pt-4 lg:py-4 fixed z-40 bg-white">
+      <div className="flex-1 w-full container flex gap-4 px-6">
         <a href="#" className="h-full">
           <img src="/organic-store-nav-logo.svg" className="w-[150px]"></img>
         </a>
