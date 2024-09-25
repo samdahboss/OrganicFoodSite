@@ -1,7 +1,7 @@
 import { FaShoppingCart } from "react-icons/fa";
 export default function Hero() {
   return (
-    <section className="flex hero lg:py-24 relative flex-col lg:flex-row px-12 container bg-[#FBFAF8]">
+    <section className="flex hero lg:py-24 relative flex-col lg:flex-row px-12 container mx-auto bg-[#FBFAF8]">
         <div className="absolute bottom-0 right-0 w-80 hidden lg:block">
             <img src="/leaves-free-img.png" className="z-0"/>
             <div className="absolute bottom-0 right-0 bg-[#FBFAF8] opacity-50 z-20 w-full h-full"></div>

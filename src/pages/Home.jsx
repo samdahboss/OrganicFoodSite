@@ -3,6 +3,7 @@ import QualityAssurance from "../components/QualityAssurance";
 import BestSales from "../components/BestSales";
 import ProductHighlights from "../components/ProductHighlights";
 import TrendingProducts from "../components/TrendingProducts";
+import CustomerReviews from "../components/CustomerReviews";
 import { FaShoppingCart } from "react-icons/fa";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       <BestSales />
       <ProductHighlights />
       <div className="call-to-action bg-black text-white py-6 lg:py-16">
-        <div className="container flex flex-col lg:flex-row items-center text-center lg:text-left gap-6 justify-between lg:px-12 px-6">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center text-center lg:text-left gap-6 justify-between lg:px-12 px-6">
           <h1 className="lg:text-4xl text-2xl font-semibold text-white">
             Get 25% Off On Your First Purchase!
           </h1>
@@ -23,7 +24,7 @@ export default function Home() {
         </div>
       </div>
       <div className="call-to-action bg-[#F8F6F3] texx-white  py-4">
-        <div className="container flex justify-between lg:px-64">
+        <div className="container mx-auto flex justify-between lg:px-64">
           <div className="lg:w-1/2"></div>
           <div className="lg:w-1/2">
             <h2 className="text-2xl lg:text-3xl font-semibold font-merriweather text-black">
@@ -33,6 +34,7 @@ export default function Home() {
         </div>
       </div>
       <TrendingProducts />
+      <CustomerReviews />
     </div>
   );
 }

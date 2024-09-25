@@ -25,7 +25,7 @@ export default function ProductHighlights() {
       <div className="absolute -top-10 w-full">
         <img src="/basil-leaf.png" alt="Product Highlights" className="mx-auto hidden lg:block" />
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 container py-12 px-12 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 container mx-auto py-12 px-12 gap-4">
         {products.map((product, index) => (
           <div
             key={index}
