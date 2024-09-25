@@ -1,4 +1,4 @@
-import BestSeller from "./BestSeller";
+import ProductCard from "./ProductCard";
 import SectionTitle from "./SectionTitle";
 export default function BestSales() {
   const products = [
@@ -37,7 +37,7 @@ export default function BestSales() {
         <SectionTitle title="Best Selling Products"/>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((product, index) => (
-            <BestSeller 
+            <ProductCard 
               key={index}
               image={product.image}
               category={product.category}
