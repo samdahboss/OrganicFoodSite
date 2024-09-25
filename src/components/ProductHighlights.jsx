@@ -23,7 +23,7 @@ export default function ProductHighlights() {
   return (
     <section className="lg:py-24 py-12 bg-[#F8F6F3] relative">
       <div className="absolute -top-10 w-full">
-        <img src="/basil-leaf.png" alt="Product Highlights" className="mx-auto" />
+        <img src="/basil-leaf.png" alt="Product Highlights" className="mx-auto hidden lg:block" />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 container py-12 px-12 gap-4">
         {products.map((product, index) => (
