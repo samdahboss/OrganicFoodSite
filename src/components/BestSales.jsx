@@ -1,4 +1,5 @@
 import BestSeller from "./BestSeller";
+import SectionTitle from "./SectionTitle";
 export default function BestSales() {
   const products = [
     {
@@ -33,12 +34,7 @@ export default function BestSales() {
   return (
     <section className="lg:py-36 py-6 w-full bg-[#FBFAF8]">
       <div className="container flex gap-4 flex-col px-12">
-        <h1 className="text-4xl text-center font-bold text-[#1D1F22]">
-          Best Selling Products
-        </h1>
-        <div className="flex justify-center pb-8">
-            <img src="/logo-leaf-new.png" alt="logo" />
-        </div>
+        <SectionTitle title="Best Selling Products"/>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((product, index) => (
             <BestSeller 
