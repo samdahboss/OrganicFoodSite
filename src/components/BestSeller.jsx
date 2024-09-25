@@ -7,9 +7,8 @@ export default function BestSeller({image, category, title,stars, price}) {
          <h2 className='text-lg font-semibold'>{title}</h2>
             <div className='flex items-center'>
                 <span className='text-greenColor'>{'★'.repeat(stars)}</span>
-                <span className='text-gray-400 ml-2'>({stars})</span>
             </div>
-        <h3 className='text-lg font-semibold'>£{price}.00</h3>
+        <h3 className='text-sm font-bold'>£{price}.00</h3>
     </div>
   )
 }
