@@ -5,7 +5,7 @@ import ProductHighlights from "../components/ProductHighlights";
 import TrendingProducts from "../components/TrendingProducts";
 import CustomerReviews from "../components/CustomerReviews";
 import { FaShoppingCart } from "react-icons/fa";
-
+import FeaturedBrands from "../components/FeaturedBrands";
 export default function Home() {
   return (
     <div className=" mx-auto">
@@ -35,6 +35,7 @@ export default function Home() {
       </div>
       <TrendingProducts />
       <CustomerReviews />
+      <FeaturedBrands/>
     </div>
   );
 }
