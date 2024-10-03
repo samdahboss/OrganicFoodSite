@@ -5,28 +5,24 @@ import CountUp from 'react-countup';
 export default function NumberCounter({ startNo, finalNo, title }) {
   const [inView, setInView] = useState(false);
   const ref = useRef(null);
-
-  useEffect(() => {
+  useEffect(()=>{
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect();
-        }
+        setInView(entry.isIntersecting);
       },
       { threshold: 0.1 }
-    );
+    )
 
     if (ref.current) {
       observer.observe(ref.current);
     }
 
-    return () => {
-      if (ref.current) {
+    return () =>{
+      if(ref.current){
         observer.unobserve(ref.current);
       }
-    };
-  }, []);
+    }
+  },[])
 
   return (
     <div ref={ref} className='w-full'>
