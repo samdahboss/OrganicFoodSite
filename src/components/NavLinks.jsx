@@ -23,6 +23,6 @@ export default function NavLinks({linkArray, lgHidden}) {
 }
 
 NavLinks.propTypes={
-    linkArray: PropTypes.arrayOf(PropTypes.string).isRequired,
-    lgHidden: PropTypes.bool.isRequired
+    linkArray: PropTypes.arrayOf(PropTypes.object).isRequired,
+    lgHidden: PropTypes.bool
 }

@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/autoplay";
 
 export default function Carousel() {
   const images = [
@@ -11,10 +12,18 @@ export default function Carousel() {
 
   return (
     <div className="rounded-lg -mt-24">
-      <Swiper loop={true} slidePerView={1}>
+      <Swiper
+        loop={true}
+        slidesPerView={1}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+      >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={image} alt={`carousel-${index}`} className="rounded-lg w-full" />
+            <img
+              src={image}
+              alt={`carousel-${index}`}
+              className="rounded-lg w-full"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
