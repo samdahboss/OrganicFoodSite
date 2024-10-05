@@ -3,7 +3,8 @@ import Carousel from "../components/Carousel";
 import AboutList from "./AboutList";
 export default function AboutQualityAssurance() {
   return (
-    <section className="relative w-full py-36 px-8  bg-[url('/leaves-free-img.png')] bg-[length:20%_auto] bg-bottom bg-right bg-no-repeat">
+    <section className="relative w-full py-36 px-8">
+      <div className="absolute inset-0  bg-[url('/leaves-free-img.png')] lg:bg-[length:30%_auto] bg-[length:60%_auto] bg-right-bottom bg-no-repeat z-0"></div>
       <div className="absolute inset-0 bg-[#FAF9F7] bg-opacity-60 z-0"></div>
       <div className="container w-full mx-auto flex lg:flex-row flex-col gap-8 lg:gap-0 inset-0 relative z-20">
         <div className="lg:w-[45%] px-8 bg-gray-100 items-center rounded-lg">

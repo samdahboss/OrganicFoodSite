@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 
@@ -15,7 +16,11 @@ export default function Carousel() {
       <Swiper
         loop={true}
         slidesPerView={1}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
