@@ -1,5 +1,6 @@
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaShoppingCart } from "react-icons/fa";
 import Carousel from "../components/Carousel";
+import AboutList from "./AboutList";
 export default function AboutQualityAssurance() {
   return (
     <section className="relative w-full py-36 px-8  bg-[url('/leaves-free-img.png')] bg-[length:20%_auto] bg-bottom bg-right bg-no-repeat">
@@ -49,6 +50,12 @@ export default function AboutQualityAssurance() {
           </h1>
           <div className="w-full relative">
             <img src='/logo-leaf-new.png' className="mx-auto lg:ml-0"/>
+          </div>
+          <AboutList />
+          <div className="py-4">
+            <button className="bg-darkGreenColor hover:bg-greenColor mx-auto lg:ml-0 text-[14px] text-white flex gap-2 z-40 items-center py-3 px-6 rounded-lg font-semibold">
+              <FaShoppingCart size={18}/> START SHOPPING
+            </button>
           </div>
         </div>
       </div>
