@@ -18,8 +18,8 @@ export default function Contact() {
           <ContactCards />
         </div>
       </section>
-      <section>
-        <div>
+      <section className="px-12">
+        <div className="container mx-auto py-4 px-12">
           <h1 className="text-2xl lg:text-3xl text-black text-center font-merriweather font-bold">
             Frequently Asked Question!
           </h1>

@@ -1,21 +1,22 @@
 import { FaShoppingBasket, FaUser, FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 import NavLinks from "./NavLinks";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const navLinks = [
     [
       {
         content: "Everything",
-        to: "/",
+        to: "/shop",
       },
       {
         content: "Groceries",
-        to: "/",
+        to: "/product-category/groceries",
       },
       {
         content: "Juice",
-        to: "/",
+        to: "/product-category/juice",
       },
     ],
     [
@@ -36,18 +37,21 @@ export default function Navbar() {
 
   const [transitionComplete, setTransitionComplete] = useState(false);
   const handleTransitionEnd = () => {
-    if(mobileNavVisible){
+    if (mobileNavVisible) {
       setTransitionComplete(true);
     } else {
       setTransitionComplete(false);
     }
-  }
+  };
   return (
     <div className="w-full flex justify-center pt-4 lg:py-4 fixed z-40 bg-white">
       <div className="flex-1 w-full container flex gap-4 px-6">
-        <a href="#" className="h-full">
-          <img src="/organic-store-nav-logo.svg" className="w-[150px]"></img>
-        </a>
+        <Link to={"/"}>
+          <a href="" className="h-full">
+            <img src="/organic-store-nav-logo.svg" className="w-[150px]"></img>
+          </a>
+        </Link>
+
         <NavLinks linkArray={navLinks[0]} />
         <div className="flex-1 flex justify-end items-center">
           <NavLinks linkArray={navLinks[1]} />
