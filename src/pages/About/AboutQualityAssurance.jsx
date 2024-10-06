@@ -1,5 +1,5 @@
 import { FaStar, FaShoppingCart, FaCheckCircle } from "react-icons/fa";
-import Carousel from "../components/Carousel";
+import Carousel from "./Carousel";
 
 export function AboutList() {
   const products = [

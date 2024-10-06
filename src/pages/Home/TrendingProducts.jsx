@@ -1,5 +1,5 @@
-import SectionTitle from "./SectionTitle";
-import ProductCard from "./ProductCard";  
+import SectionTitle from "../../components/SectionTitle";
+import ProductCard from "../../components/ProductCard";  
 export default function TrendingProducts() {
     const products = [
         {

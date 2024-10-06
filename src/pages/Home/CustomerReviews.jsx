@@ -1,4 +1,4 @@
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../../components/SectionTitle";
 import { FaShoppingCart, FaStar } from "react-icons/fa";
 import PropTypes from "prop-types";
 

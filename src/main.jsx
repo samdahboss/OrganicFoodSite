@@ -3,10 +3,10 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App.jsx'
 import './index.css'
-import Contact from './pages/Contact.jsx';
-import About from './pages/About.jsx'
-import Home from './pages/Home.jsx'
-import Shop from './pages/Shop.jsx';
+import Contact from './pages/Contact/Contact.jsx';
+import About from './pages/About/About.jsx'
+import Home from './pages/Home/Home.jsx'
+import Shop from './pages/Shop/Shop.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

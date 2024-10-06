@@ -1,5 +1,5 @@
-import ProductCard from "./ProductCard";
-import SectionTitle from "./SectionTitle";
+import ProductCard from "../../components/ProductCard";
+import SectionTitle from "../../components/SectionTitle";
 export default function BestSales() {
   const products = [
     {

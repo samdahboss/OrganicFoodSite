@@ -1,6 +1,6 @@
-import ContactCards from "../components/ContactCards";
-import Faq from "../components/Faq";
-import GeneralHero from "../components/GeneralHero";
+import ContactCards from "./ContactCards";
+import Faq from "./Faq";
+import GeneralHero from "../../components/GeneralHero";
 export default function Contact() {
   return (
     <div className="container mx-auto">

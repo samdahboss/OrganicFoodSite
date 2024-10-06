@@ -1,6 +1,6 @@
-import NumberCounter from "../components/NumberCounter";
-import AboutQualityAssurance from "../components/AboutQualityAssurance";
-import GeneralHero from "../components/GeneralHero";
+import NumberCounter from "./NumberCounter";
+import AboutQualityAssurance from "./AboutQualityAssurance";
+import GeneralHero from "../../components/GeneralHero";
 export default function About() {
   return (
     <div className="container mx-auto">
