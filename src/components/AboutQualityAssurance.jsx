@@ -1,6 +1,28 @@
-import { FaStar, FaShoppingCart } from "react-icons/fa";
+import { FaStar, FaShoppingCart, FaCheckCircle } from "react-icons/fa";
 import Carousel from "../components/Carousel";
-import AboutList from "./AboutList";
+
+export function AboutList() {
+  const products = [
+    "Fresh fruits",
+    "Dry fruits",
+    "Fresh vegetables",
+    "Dried vegetables",
+    "Beauty products",
+    "Milk products",
+    "Organic honey",
+    "Organic tea",
+  ];
+  return (
+    <ul className="grid grid-cols-2">
+      {products.map((product, index) => (
+        <div key={index} className="flex items-center gap-4 py-2">
+          <FaCheckCircle className="text-[#8bc34a]" />
+          <li key={index}>{product}</li>
+        </div>
+      ))}
+    </ul>
+  );
+}
 export default function AboutQualityAssurance() {
   return (
     <section className="relative w-full py-36 px-8">
@@ -50,12 +72,12 @@ export default function AboutQualityAssurance() {
             We Deal With Various Quality Organic Products!
           </h1>
           <div className="w-full relative">
-            <img src='/logo-leaf-new.png' className="mx-auto lg:ml-0"/>
+            <img src="/logo-leaf-new.png" className="mx-auto lg:ml-0" />
           </div>
           <AboutList />
           <div className="py-4">
             <button className="bg-darkGreenColor hover:bg-greenColor mx-auto lg:ml-0 text-[14px] text-white flex gap-2 z-40 items-center py-3 px-6 rounded-lg font-semibold">
-              <FaShoppingCart size={18}/> START SHOPPING
+              <FaShoppingCart size={18} /> START SHOPPING
             </button>
           </div>
         </div>
