@@ -1,4 +1,4 @@
-import Hero from "../components/Hero";
+import HomeHero from "../components/HomeHero";
 import QualityAssurance from "../components/QualityAssurance";
 import BestSales from "../components/BestSales";
 import ProductHighlights from "../components/ProductHighlights";
@@ -9,7 +9,7 @@ import FeaturedBrands from "../components/FeaturedBrands";
 export default function Home() {
   return (
     <div className=" mx-auto">
-      <Hero />
+      <HomeHero />
       <QualityAssurance />
       <BestSales />
       <ProductHighlights />

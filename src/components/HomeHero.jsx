@@ -1,5 +1,5 @@
 import { FaShoppingCart } from "react-icons/fa";
-export default function Hero() {
+export default function HomeHero() {
   return (
     <section className="flex hero lg:py-24 relative flex-col lg:flex-row px-12 container mx-auto bg-[#FBFAF8]">
         <div className="absolute bottom-0 right-0 w-80 hidden lg:block">

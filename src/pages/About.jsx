@@ -1,15 +1,10 @@
 import NumberCounter from "../components/NumberCounter";
 import AboutQualityAssurance from "../components/AboutQualityAssurance";
+import GeneralHero from "../components/GeneralHero";
 export default function About() {
   return (
     <div className="container mx-auto">
-      <section className="section-hero bg-[#F8F6F3] py-12 w-full">
-        <div className="container mx-auto text-center">
-          <h1 className="lg:text-[52px] text-[36px] font-bold py-6 lg:py-12 font-merriweather">
-            About Us
-          </h1>
-        </div>
-      </section>
+      <GeneralHero title="About Us" />
       <section className="about-description w-full">
         <div className="container mx-auto">
           <img src="/basil-leaf.png" className="mx-auto w-[150px] -mt-8" />
