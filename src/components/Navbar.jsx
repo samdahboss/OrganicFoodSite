@@ -44,12 +44,10 @@ export default function Navbar() {
     }
   };
   return (
-    <div className="w-full flex justify-center pt-4 lg:py-4 fixed z-40 bg-white">
+    <div className="w-full flex justify-center pt-4 lg:py-4 fixed z-50 bg-white">
       <div className="flex-1 w-full container flex gap-4 px-6">
         <Link to={"/"}>
-          <a href="" className="h-full">
-            <img src="/organic-store-nav-logo.svg" className="w-[150px]"></img>
-          </a>
+            <img src="/organic-store-nav-logo.svg" className="w-[150px] h-full"></img>
         </Link>
 
         <NavLinks linkArray={navLinks[0]} />

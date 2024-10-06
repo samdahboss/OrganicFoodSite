@@ -1,4 +1,5 @@
 import ContactCards from "../components/ContactCards";
+import Faq from "../components/Faq";
 export default function Contact() {
   return (
     <div className="container mx-auto">
@@ -18,14 +19,15 @@ export default function Contact() {
           <ContactCards />
         </div>
       </section>
-      <section className="px-12">
-        <div className="container mx-auto py-4 px-12">
-          <h1 className="text-2xl lg:text-3xl text-black text-center font-merriweather font-bold">
+      <section className="relative lg:px-12  pb-24">
+        <div className="container flex flex-col gap-4 mx-auto px-12">
+          <h1 className="text-2xl lg:text-3xl text-black text-center relative z-40 font-merriweather font-bold">
             Frequently Asked Question!
           </h1>
-          <div className="w-full relative">
+          <div className="w-full relative z-40 pb-8">
             <img src="/logo-leaf-new.png" className="mx-auto" />
           </div>
+          <Faq/>
         </div>
       </section>
     </div>
