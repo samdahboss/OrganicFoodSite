@@ -3,6 +3,7 @@ import { SortOrderContext } from "./SortOrderContext";
 
 export default function ProductsSort() {
   const {orderBy, changeOrder} = useContext(SortOrderContext)
+
   return (
     <div className="flex justify-between lg:items-center  flex-col gap-2 lg:gap-0 lg:flex-row">
       <h4 className="text-gray-500">Showing --- results</h4>

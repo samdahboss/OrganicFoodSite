@@ -9,6 +9,7 @@ export default function SortOrderProvider({children}) {
   const changeOrder = (event) => {
     setOrderBy(event.target.value);
   };
+  
   return (
     <SortOrderContext.Provider value={{orderBy, changeOrder}}>
         {children}
