@@ -1,35 +1,11 @@
 import PriceFilter from "./FilterComponent";
 import ShopNavProduct from "./ShopNavProduct";
+import ShopNavProducts from '../../utils/ShopNavProductsArr'
+import categories from "../../utils/ShopNavCategoriesList";
+
 export default function ShopNav() {
-  const categories = [
-    {
-      category: "Groceries",
-      quantity: 10,
-    },
-    {
-      category: "Juices",
-      quantity: 9,
-    },
-  ];
-  const products = [
-    {
-      imageUrl: "/best-seller-4.jpg",
-      productName: "Natural Extracted Edible Oil",
-      realPrice: 34,
-      discountPrice: 25,
-      sale: true
-    },
-    {
-      imageUrl: "/best-seller-1.jpg",
-      productName: "Assorted Coffee",
-      realPrice: 35
-    },
-    {
-      imageUrl: "/best-seller-2.jpg",
-      productName: "Hand Sanitizer",
-      realPrice: 15
-    },
-  ];
+  
+  
   return (
     <div className="shop-nav pe-12 pb-64 lg:w-1/4 border-r border-gray-300">
       <div className="flex gap-2 pb-8">
@@ -48,7 +24,7 @@ export default function ShopNav() {
         ))}
       </div>
       <div className="mt-12">
-        {products.map((item, index) => (
+        {ShopNavProducts.map((item, index) => (
           <ShopNavProduct
             key={index}
             imageUrl={item.imageUrl}

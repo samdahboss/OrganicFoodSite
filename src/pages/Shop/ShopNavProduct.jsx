@@ -38,6 +38,6 @@ ShopNavProduct.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   productName: PropTypes.string.isRequired,
   realPrice: PropTypes.number.isRequired,
-  discountPrice: PropTypes.number.isRequired,
-  sale: PropTypes.bool.isRequired,
+  discountPrice: PropTypes.number,
+  sale: PropTypes.bool,
 };

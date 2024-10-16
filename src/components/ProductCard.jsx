@@ -52,6 +52,6 @@ ProductCard.propTypes = {
   title: PropTypes.string.isRequired,
   stars: PropTypes.number.isRequired,
   price: PropTypes.number,
-  sale: PropTypes.bool.isRequired,
+  sale: PropTypes.bool,
   discountPrice: PropTypes.number
 };
