@@ -1,6 +1,7 @@
 import SectionTitle from "../../components/SectionTitle";
 import { FaShoppingCart, FaStar } from "react-icons/fa";
 import PropTypes from "prop-types";
+import reviews from '../../utils/HomeCustomerReviews'
 
 export function Review({ image, name, stars, review }) {
   return (
@@ -29,22 +30,7 @@ Review.propTypes = {
   review: PropTypes.string.isRequired,
 };
 export default function CustomerReviews() {
-  const reviews = [
-    {
-      image: "/client02-free-img.png",
-      name: "Mila Kunis",
-      stars: 5,
-      review:
-        "Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    },
-    {
-      image: "/client01-free-img.png",
-      name: "Mike Sendler",
-      stars: 5,
-      review:
-        "Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-    },
-  ];
+  
   return (
     <section className="relative lg:py-36 py-6 w-full bg-[url('/logo-leaf2-free-img.png')] bg-[length:37%_auto] inset-0 bg-no-repeat">
       <div className="absolute inset-0 bg-[#F8F6F3] opacity-90"></div>

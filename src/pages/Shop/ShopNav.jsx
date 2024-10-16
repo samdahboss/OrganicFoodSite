@@ -1,11 +1,9 @@
 import PriceFilter from "./FilterComponent";
 import ShopNavProduct from "./ShopNavProduct";
-import ShopNavProducts from '../../utils/ShopNavProductsArr'
+import ShopNavProducts from "../../utils/ShopNavProductsArr";
 import categories from "../../utils/ShopNavCategoriesList";
 
 export default function ShopNav() {
-  
-  
   return (
     <div className="shop-nav pe-12 pb-64 lg:w-1/4 border-r border-gray-300">
       <div className="flex gap-2 pb-8">

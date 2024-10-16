@@ -1,11 +1,5 @@
+import brandsLogo from "../../utils/BrandsLogo";
 export default function FeaturedBrands() {
-  const brandsLogo =[
-    '/logo-1.svg',
-    '/logo-2.svg',
-    '/logo-3.svg',
-    '/logo-4.svg',
-    '/logo-5.svg'
-  ]
   return (
     <section className="bg-[#F8F6F3]">
       <div className="container flex flex-col lg:flex-row px-12">
