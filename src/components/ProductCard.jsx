@@ -7,7 +7,7 @@ export default function ProductCard({
   stars,
   price,
   sale,
-  discountPrice
+  oldPrice,
 }) {
   return (
     <div className="flex flex-col items-center text-center gap-1 relative">
@@ -31,17 +31,17 @@ export default function ProductCard({
         </span>
       </div>
       <div className="mt-2 flex gap-2">
-          <div className={` ${sale && "line-through text-gray-300"}`}>
+        {sale && (
+          <div className={` ${"line-through text-gray-300"}`}>
             <span>£</span>
-            <span className="font-bold">{price}.00</span>
+            <span className="font-bold">{oldPrice}.00</span>
           </div>
-          {sale && (
-            <div className="">
-              <span>£</span>
-              <span className="font-bold">{discountPrice}.00</span>
-            </div>
-          )}
+        )}
+        <div className="">
+          <span>£</span>
+          <span className="font-bold">{price}.00</span>
         </div>
+      </div>
     </div>
   );
 }
@@ -53,5 +53,5 @@ ProductCard.propTypes = {
   stars: PropTypes.number.isRequired,
   price: PropTypes.number,
   sale: PropTypes.bool,
-  discountPrice: PropTypes.number
+  oldPrice: PropTypes.number,
 };

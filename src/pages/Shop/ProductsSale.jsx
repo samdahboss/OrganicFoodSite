@@ -16,7 +16,7 @@ export default function ProductsSale() {
           stars={5}
           price={item.price}
           sale={item.sale}
-          discountPrice={item.discountPrice}
+          oldPrice={item.oldPrice}
         />
       ))}
     </div>
