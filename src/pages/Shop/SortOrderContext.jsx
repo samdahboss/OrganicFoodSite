@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export const SortOrderContext = createContext();
 
 export default function SortOrderProvider({ children }) {
-  const [orderBy, setOrderBy] = useState("price-hl");
+  const [orderBy, setOrderBy] = useState("");
 
   const changeOrder = (event) => {
     setOrderBy(event.target.value);
