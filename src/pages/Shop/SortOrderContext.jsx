@@ -1,17 +1,23 @@
-import { createContext, useState} from "react";
+import { createContext, useState } from "react";
 import PropTypes from "prop-types";
 
 export const SortOrderContext = createContext();
 
 export default function SortOrderProvider({ children }) {
-  const [orderBy, setOrderBy] = useState("category");
+  const [orderBy, setOrderBy] = useState("price-hl");
 
   const changeOrder = (event) => {
     setOrderBy(event.target.value);
   };
 
   const sortOrder = (a, b) => {
-    return b[orderBy] - a[orderBy];
+    if (orderBy === "price-lh") {
+      return a["price"] - b["price"];
+    }else if (orderBy === "price-hl") {
+      return b["price"] - a["price"];
+    }else{
+      return b[orderBy] - a[orderBy];
+    }
   };
   return (
     <SortOrderContext.Provider value={{ orderBy, changeOrder, sortOrder }}>

@@ -12,12 +12,12 @@ export default function ProductsSort() {
         value={orderBy}
         onChange={changeOrder}
       >
-        <option value="category">Default Sorting</option>
+        <option value="price-hl">Default Sorting</option>
         <option value="popularity">Sort by Popularity</option>
         <option value="rating">Sort by Average Rating</option>
         <option value="releaseDate">Sort by Latest</option>
-        <option value="price">Sort by Price: low to high</option>
-        <option value="price">Sort by Price: high to low</option>
+        <option value="price-lh">Sort by Price: low to high</option>
+        <option value="price-hl">Sort by Price: high to low</option>
       </select>
     </div>
   );

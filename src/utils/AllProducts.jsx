@@ -5,7 +5,7 @@ const allProducts = [
       title: "Assorted Coffee",
       stars: 5,
       price: 35,
-      popularity: 5.0,
+      popularity: 3.7,
       rating: 5.0,
       releaseDate: 34
     },
@@ -18,7 +18,7 @@ const allProducts = [
       price: 25,
       sale: true,
       popularity: 3.5,
-      rating: 5.0,
+      rating: 3.0,
       releaseDate: 34
     },
     {
@@ -29,7 +29,7 @@ const allProducts = [
       price: 25,
       sale: true,
       popularity: 1.5,
-      rating: 5.0,
+      rating: 4.0,
       releaseDate: 34
     },
     {
@@ -39,7 +39,7 @@ const allProducts = [
       stars: 5,
       price: 34,
       popularity: 2.2,
-      rating: 5.0,
+      rating: 1.0,
       releaseDate: 34
     },
     {
@@ -49,7 +49,7 @@ const allProducts = [
       stars: 5,
       price: 34,
       popularity: 4.3,
-      rating: 5.0,
+      rating: 2.5,
       releaseDate: 34
     },
     {
@@ -59,7 +59,7 @@ const allProducts = [
       stars: 5,
       price: 34,
       popularity: 3,
-      rating: 5.0,
+      rating: 3.2,
       releaseDate: 34
     },
     {
@@ -69,7 +69,7 @@ const allProducts = [
       stars: 5,
       price: 15,
       popularity: 3.2,
-      rating: 5.0,
+      rating: 2.9,
       releaseDate: 34
     },
     {
@@ -79,7 +79,7 @@ const allProducts = [
       stars: 5,
       price: 19,
       popularity: 4.1,
-      rating: 5.0,
+      rating: 2.4,
       releaseDate: 34
     },
     {
@@ -90,7 +90,7 @@ const allProducts = [
       price: 25,
       sale: true,
       popularity: 4.1,
-      rating: 5.0,
+      rating: 1.9,
       releaseDate: 34
     },
     {
@@ -99,7 +99,7 @@ const allProducts = [
       title: "Organic Face Scrub",
       price: 35,
       popularity: 4.9,
-      rating: 5.0,
+      rating: 3.7,
       releaseDate: 34
     },
     {
@@ -108,7 +108,7 @@ const allProducts = [
       title: "Pulses From Organic Farm",
       price: 15,
       popularity: 4.4,
-      rating: 5.0,
+      rating: 2.6,
       releaseDate: 34
     },
     {
@@ -117,7 +117,7 @@ const allProducts = [
       title: "Wheat From Organic Farm",
       price: 34,
       popularity: 1.8,
-      rating: 5.0,
+      rating: 1.8,
       releaseDate: 34
     },
   ];
