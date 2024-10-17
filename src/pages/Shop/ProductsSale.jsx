@@ -4,11 +4,10 @@ import { useContext } from "react";
 import { SortOrderContext } from "./SortOrderContext";
 
 export default function ProductsSale() {
-  const { orderBy } = useContext(SortOrderContext);
-  console.log(orderBy)
+  const { sortOrder } = useContext(SortOrderContext);
   return (
     <div className="grid lg:grid-cols-3 gap-x-6 gap-y-12 mt-6">
-      {allProducts.map((item, index) => (
+      {allProducts.sort(sortOrder).map((item, index) => (
         <ProductCard
           key={index}
           image={item.image}

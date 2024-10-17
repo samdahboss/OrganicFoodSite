@@ -5,23 +5,26 @@ const allProducts = [
       title: "Assorted Coffee",
       stars: 5,
       price: 35,
+      popularity: 5.0
     },
     {
       image: "/cashew-butter.jpg",
       category: "Groceries",
       title: "Cashew Butter",
       stars: 5,
-      price: 35,
-      discountPrice: 25,
+      oldPrice: 35,
+      price: 25,
       sale: true,
+      popularity: 3.5
     },
     {
       image: "/diabetic-cookies-400x400.jpg",
       category: "Groceries",
       title: "Diabetic Cookies",
-      price: 35,
-      discountPrice: 25,
+      oldPrice: 35,
+      price: 25,
       sale: true,
+      popularity: 1.5
     },
     {
       image: "/eggs-400x400.jpg",
@@ -29,20 +32,23 @@ const allProducts = [
       title: "Farm Fresh Eggs",
       stars: 5,
       price: 34,
+      popularity: 2.2
     },
     {
       image: "/orage-juice-kariz-400x400.jpg",
       category: "Juice",
-      title: "Farm Fresh Eggs",
+      title: "Fresh Orange Juice",
       stars: 5,
       price: 34,
+      popularity: 4.3
     },
     {
       image: "/organic-honey-400x400.jpg",
       category: "Juice",
-      title: "Farm Fresh Eggs",
+      title: "Fresh Organic Honey",
       stars: 5,
       price: 34,
+      popularity: 3
     },
     {
       image: "/best-seller-2.jpg",
@@ -50,6 +56,7 @@ const allProducts = [
       title: "Hand Sanitizer",
       stars: 5,
       price: 15,
+      popularity: 3.2
     },
     {
       image: "/best-seller-3.jpg",
@@ -57,31 +64,37 @@ const allProducts = [
       title: "Handpicked Red Chillies",
       stars: 5,
       price: 19,
+      popularity: 4.1
     },
     {
       image: "/best-seller-4.jpg",
       category: "Groceries",
       title: "Natural Extracted Edible Oil",
-      discountPrice: 25,
+      oldPrice:34,
+      price: 25,
       sale: true,
+      popularity: 4.1
     },
     {
       image: "/face-wash-400x400.jpg",
       category: "Groceries",
       title: "Organic Face Scrub",
       price: 35,
+      popularity: 4.9
     },
     {
       image: "/pulses-400x400.jpg",
       category: "Groceries",
       title: "Pulses From Organic Farm",
       price: 15,
+      popularity: 4.4
     },
     {
       image: "/wheat-400x400.jpg",
       category: "Groceries",
       title: "Wheat From Organic Farm",
       price: 34,
+      popularity: 1.8
     },
   ];
 

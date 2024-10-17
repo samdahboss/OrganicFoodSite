@@ -10,8 +10,19 @@ export default function SortOrderProvider({children}) {
     setOrderBy(event.target.value);
   };
   
+  // let sortCriteria = ""
+  // useEffect(()=>{
+  //   switch(orderBy){
+  //     case "Sort by Popularity":
+  //       sortCriteria="popularity"
+  //   }
+  // },[orderBy])
+  
+  const sortOrder =(a,b)=>{
+    return b.price - a.price;
+  }
   return (
-    <SortOrderContext.Provider value={{orderBy, changeOrder}}>
+    <SortOrderContext.Provider value={{orderBy, changeOrder, sortOrder}}>
         {children}
     </SortOrderContext.Provider>
   )
