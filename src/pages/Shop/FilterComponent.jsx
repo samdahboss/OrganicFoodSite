@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Range } from "react-range";
+import { FilterContext } from "./FilterProductsContext";
 
 const PriceFilter = () => {
-  const [priceRange, setPriceRange] = useState([10, 40]); // Initial price range
-  const handleFilter = ()=>{
+  const {priceRange, setPriceRange, handleFilter} = useContext(FilterContext)
 
-  }
   return (
     <div className="price-filter flex flex-col gap-4">
       <h3 className="text-2xl font-bold font-merriweather">Filter by price</h3>

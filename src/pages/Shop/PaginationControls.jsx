@@ -8,16 +8,14 @@ export default function PaginationControls({
   totalPages,
 }) {
   const pageArr = Array(totalPages).fill(0);
-  const pageNavs = pageArr.map((item, index) => {
-    return (
-      <PageBtn
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        page={index + 1}
-        key={index}
-      />
-    );
-  });
+  const pageNavs = pageArr.map((item, index) => (
+    <PageBtn
+      currentPage={currentPage}
+      setCurrentPage={setCurrentPage}
+      page={index + 1}
+      key={index}
+    />
+  ));
   return (
     <div className="gap-2 flex w-[150px]">
       {currentPage !== 1 && (
