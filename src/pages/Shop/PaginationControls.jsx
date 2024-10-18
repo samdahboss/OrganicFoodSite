@@ -7,9 +7,20 @@ export default function PaginationControls({
   setCurrentPage,
   totalPages,
 }) {
+  const pageArr = Array(totalPages).fill(0);
+  const pageNavs = pageArr.map((item, index) => {
+    return (
+      <PageBtn
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        page={index + 1}
+        key={index}
+      />
+    );
+  });
   return (
-    <div className="gap-2 grid grid-cols-3 w-[150px]">
-      {currentPage === 2 && (
+    <div className="gap-2 flex w-[150px]">
+      {currentPage !== 1 && (
         <button
           onClick={() =>
             setCurrentPage((prev) => Math.min(prev - 1, totalPages))
@@ -19,18 +30,10 @@ export default function PaginationControls({
           <FaArrowLeft />
         </button>
       )}
-      <PageBtn
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        page={1}
-      />
-      <PageBtn
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        page={2}
-      />
 
-      {currentPage == 1 && (
+      {pageNavs}
+
+      {currentPage < totalPages && (
         <button
           onClick={() =>
             setCurrentPage((prev) => Math.min(prev + 1, totalPages))
