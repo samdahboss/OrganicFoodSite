@@ -1,9 +1,8 @@
 import ProductCard from "../../components/ProductCard";
-import allProducts from "../../utils/AllProducts";
-import PageBtn from "./PageBtn";
 import { useContext, useState } from "react";
 import { SortOrderContext } from "./SortOrderContext";
-import { FaArrowRight,FaArrowLeft } from "react-icons/fa6";
+import PaginationControls from "./PaginationControls";
+import allProducts from "../../utils/AllProducts";
 
 export default function ProductsSale() {
   const { sortOrder } = useContext(SortOrderContext);
@@ -31,28 +30,7 @@ export default function ProductsSale() {
           oldPrice={item.oldPrice}
         />
       ))}
-      <div className="gap-2 grid grid-cols-3 w-[150px]">
-        {currentPage === 2 && (<button
-          onClick={() =>
-            setCurrentPage((prev) => Math.min(prev - 1, totalPages))
-          }
-          className="hover:bg-greenColor hover:text-white text-greenColor bg-transparent border border-greenColor p-2 "
-        >
-          <FaArrowLeft/>
-        </button>)}
-        <PageBtn currentPage={currentPage} setCurrentPage={setCurrentPage} page={1}/>
-        <PageBtn currentPage={currentPage} setCurrentPage={setCurrentPage} page={2}/>
-        
-
-        {currentPage == 1 && (<button
-          onClick={() =>
-            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-          }
-          className="hover:bg-greenColor hover:text-white text-greenColor bg-transparent border border-greenColor p-2 "
-        >
-          <FaArrowRight/>
-        </button>)}
-      </div>
+      <PaginationControls setCurrentPage={setCurrentPage} totalPages={totalPages} currentPage={currentPage}/>
     </div>
   );
 }

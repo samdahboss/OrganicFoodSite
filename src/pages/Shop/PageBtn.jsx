@@ -4,7 +4,7 @@ export default function PageBtn({currentPage, setCurrentPage, page}) {
     <button
       onClick={() => setCurrentPage(page)}
       disabled={currentPage === page}
-      className="hover:bg-greenColor hover:text-white text-greenColor bg-transparent border border-greenColor p-2 "
+      className={`${currentPage == page ? "bg-greenColor text-white": "text-greenColor bg-transparent"} hover:bg-greenColor hover:text-white  border border-greenColor p-2 `}
     >
       {page}
     </button>
