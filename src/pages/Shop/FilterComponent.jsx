@@ -51,6 +51,7 @@ const PriceFilter = () => {
               className="w-5/6 outline-0"
               type="number"
               defaultValue={item}
+              value={priceRange[index]}
               max={40}
               min={10}
               onChange={(event)=>userPriceInput(event, index)}
