@@ -1,5 +1,6 @@
 import ProductsSort from "./ProductsSort";
 import ProductsSale from "./ProductsSale";
+import ProductsCountProvider from "./ProductsCountContext";
 export default function ShopProductDisplay() {
   return (
     <div className="shop-nav lg:ps-12 lg:w-3/4">
@@ -9,8 +10,10 @@ export default function ShopProductDisplay() {
           Shop
         </h1>
         <div className="mt-6">
-          <ProductsSort />
-          <ProductsSale/>
+          <ProductsCountProvider>
+            <ProductsSort />
+            <ProductsSale />
+          </ProductsCountProvider>
         </div>
       </div>
     </div>

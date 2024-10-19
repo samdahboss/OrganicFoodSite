@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { SortOrderContext } from "./SortOrderContext";
+import { ProductsCountContext } from "./ProductsCountContext";
 
 export default function ProductsSort() {
   const {orderBy, changeOrder} = useContext(SortOrderContext)
+  
 
   return (
     <div className="flex justify-between lg:items-center  flex-col gap-2 lg:gap-0 lg:flex-row">
