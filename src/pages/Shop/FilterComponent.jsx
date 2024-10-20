@@ -6,13 +6,13 @@ const PriceFilter = () => {
   const { priceRange, setPriceRange } = useContext(FilterContext);
   const userPriceInput = (event, index) => {
     const value = event.target.value;
-    if (value <= 40 && value >= 10) {
+    // if (value <= 40 && value >= 10) {
       if (index === 0) {
         setPriceRange([parseInt(value), priceRange[1]]);
       } else if (index === 1) {
         setPriceRange([priceRange[0], parseInt(value)]);
       }
-    }
+    // }
   };
   return (
     <div className="price-filter flex flex-col gap-4">
