@@ -9,7 +9,7 @@ export default function Shop() {
       <SortOrderProvider>
         <FilterContextProvider>
           <ShopNav />
-          <ShopProductDisplay />
+          <ShopProductDisplay directory="Home/Shop" sectionName="Shop"/>
         </FilterContextProvider>
       </SortOrderProvider>
     </section>
