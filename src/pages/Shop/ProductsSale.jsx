@@ -1,29 +1,17 @@
 import ProductCard from "../../components/ProductCard";
-import { useContext, useState } from "react";
-import { SortOrderContext } from "./SortOrderContext";
-import { FilterContext } from "./FilterProductsContext";
+import { useContext } from "react";
+import { ProductsCountContext } from "./ProductsCountContext";
 import PaginationControls from "./PaginationControls";
-import allProducts from "../../utils/AllProducts";
+
 
 export default function ProductsSale() {
-  const { sortOrder } = useContext(SortOrderContext);
-  const { handleFilter } = useContext(FilterContext);
-  const itemsPerPage = 9;
+  
+  const  {currentPage, setCurrentPage,totalPages, sortedProducts} = useContext(ProductsCountContext)
 
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const totalPages = Math.ceil(allProducts.length / itemsPerPage);
-
-  const productsDisplayed = allProducts.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
   return (
     <div>
       <div className="grid lg:grid-cols-3 gap-x-6 gap-y-12 mt-6 mb-12">
-        {productsDisplayed
-          .filter(handleFilter)
-          .sort(sortOrder)
+        {sortedProducts
           .map((item, index) => (
             <ProductCard
               key={index}
