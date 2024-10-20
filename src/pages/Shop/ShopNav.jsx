@@ -2,6 +2,7 @@ import PriceFilter from "./FilterComponent";
 import ShopNavProduct from "./ShopNavProduct";
 import ShopNavProducts from "../../utils/ShopNavProductsArr";
 import categories from "../../utils/ShopNavCategoriesList";
+import { Link } from "react-router-dom";
 
 export default function ShopNav() {
   return (
@@ -15,10 +16,12 @@ export default function ShopNav() {
       <PriceFilter />
       <div className="mt-4">
         {categories.map((item, index) => (
-          <div key={index} className="ps-4 flex my-2">
-            <h4 className="text-greenColor">{item.category}</h4>
-            <span className="ps-2">({item.quantity})</span>
-          </div>
+          <Link key={index} to={item.link}>
+            <div className="ps-4 flex my-2">
+              <h4 className="text-greenColor">{item.category}</h4>
+              <span className="ps-2">({item.quantity})</span>
+            </div>
+          </Link>
         ))}
       </div>
       <div className="mt-12">
