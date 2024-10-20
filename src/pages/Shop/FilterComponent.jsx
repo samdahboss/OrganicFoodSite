@@ -1,16 +1,19 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import { Range } from "react-range";
 import { FilterContext } from "./FilterProductsContext";
 
 const PriceFilter = () => {
   const { priceRange, setPriceRange } = useContext(FilterContext);
-  const userPriceInput = (event, index) =>{
-    if(index === 0){
-      setPriceRange([parseInt(event.target.value), priceRange[1]])
-    }else if(index === 1){
-      setPriceRange([priceRange[0],parseInt(event.target.value)])
+  const userPriceInput = (event, index) => {
+    const value = event.target.value;
+    if (value <= 40 && value >= 10) {
+      if (index === 0) {
+        setPriceRange([parseInt(value), priceRange[1]]);
+      } else if (index === 1) {
+        setPriceRange([priceRange[0], parseInt(value)]);
+      }
     }
-  }
+  };
   return (
     <div className="price-filter flex flex-col gap-4">
       <h3 className="text-2xl font-bold font-merriweather">Filter by price</h3>
@@ -54,7 +57,7 @@ const PriceFilter = () => {
               value={priceRange[index]}
               max={40}
               min={10}
-              onChange={(event)=>userPriceInput(event, index)}
+              onChange={(event) => userPriceInput(event, index)}
             />
           </div>
         ))}
