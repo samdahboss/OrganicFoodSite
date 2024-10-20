@@ -13,9 +13,7 @@ export default function ProductsCountProvider({ children }) {
     const itemsPerPage = 9;
 
     const [currentPage, setCurrentPage] = useState(1);
-
-    const totalPages = Math.ceil(allProducts.length / itemsPerPage);
-
+ 
     const filteredProducts = allProducts.filter(handleFilter);
 
     const productsOnPage = filteredProducts.slice(
@@ -25,6 +23,7 @@ export default function ProductsCountProvider({ children }) {
   
     const sortedProducts = productsOnPage.sort(sortOrder);
 
+    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
     return (
         <ProductsCountContext.Provider
             value={{ currentPage, setCurrentPage, totalPages, sortedProducts }}
