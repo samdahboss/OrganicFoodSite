@@ -39,11 +39,11 @@ export default function Navbar() {
       },
       {
         content: "Groceries",
-        to: "/product-category/groceries",
+        to: "/groceries",
       },
       {
         content: "Juice",
-        to: "/product-category/juice",
+        to: "/juice",
       },
     ],
     [
