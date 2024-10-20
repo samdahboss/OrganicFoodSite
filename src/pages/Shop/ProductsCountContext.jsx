@@ -16,15 +16,14 @@ export default function ProductsCountProvider({ children }) {
 
     const totalPages = Math.ceil(allProducts.length / itemsPerPage);
 
-    const productsOnPage = allProducts.slice(
+    const filteredProducts = allProducts.filter(handleFilter);
+
+    const productsOnPage = filteredProducts.slice(
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
     );
-
-    const filteredProducts = productsOnPage.filter(handleFilter);
-
-    // const  ;
-    const sortedProducts = filteredProducts.sort(sortOrder);
+  
+    const sortedProducts = productsOnPage.sort(sortOrder);
 
     return (
         <ProductsCountContext.Provider
