@@ -5,13 +5,16 @@ export const FilterContext = createContext();
 
 export default function FilterContextProvider({ children }) {
   const [priceRange, setPriceRange] = useState([10, 40]); // Initial price range
+  const [category, setCategories] = useState("")
   const handleFilter = (product) => {
     return product.price >= priceRange[0] && product.price <= priceRange[1]
   };
-  
+  const filterCategories = (product) =>{
+    return product.category == category;
+  }
   return (
     <FilterContext.Provider
-      value={{ priceRange, handleFilter, setPriceRange }}
+      value={{ priceRange, handleFilter, setPriceRange, setCategories, filterCategories }}
     >
       {children}
     </FilterContext.Provider>
