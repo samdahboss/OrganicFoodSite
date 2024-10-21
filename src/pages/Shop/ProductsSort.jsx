@@ -10,7 +10,7 @@ export default function ProductsSort() {
     <div className="flex justify-between lg:items-center  flex-col gap-2 lg:gap-0 lg:flex-row">
       <h4 className="text-gray-500">Showing --- results</h4>
       <select
-        className="orderby p-2 outline-0 bg-[#F8F6F3]"
+        className="orderby p-2 outline-0 bg-[#F8F6F3] px-0"
         value={orderBy}
         onChange={changeOrder}
       >
