@@ -12,7 +12,7 @@ export default function ProductsSale() {
     <div>
       <div className="grid lg:grid-cols-3 gap-x-6 gap-y-12 mt-6 mb-12">
         {sortedProducts.map((item, index) => (
-          <Link to={{ pathname: `/shop/${item.link}` }} key={index}>
+          <Link to={{ pathname: `/product/${item.link}` }} key={index}>
             <ProductCard
               image={item.image}
               category={item.category}
