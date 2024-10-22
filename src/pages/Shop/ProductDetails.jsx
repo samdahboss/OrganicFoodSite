@@ -38,7 +38,7 @@ export default function ProductDetails() {
               <input
                 type="number"
                 defaultValue={1}
-                className="w-[50px] border flex justify-center "
+                className="w-[50px] border flex justify-center p-3 "
               />
               <button className="bg-darkGreenColor hover:bg-greenColor w-1/2 text-white flex justify-center gap-2 z-40 items-center py-3 px-6 rounded-lg font-semibold">
                 ADD TO CART
