@@ -3,15 +3,20 @@ import categories from "../../utils/ShopNavCategoriesList";
 import allProducts from "../../utils/AllProducts";
 // import { useContext } from "react";
 // import { FilterContext } from "./FilterProductsContext";
+import { useState } from "react";
 
 export default function ProductDetails() {
   const { index } = useParams();
   // const {setCategories} = useContext(FilterContext)
-  const currentProduct = allProducts[parseInt(index)]
+  const currentProduct = allProducts[parseInt(index)];
+  const [reviews, setReviews] = useState(false)
+  const [description, setDescription] = useState(false)
+  const toggleInfo =()=>{
 
+  }
   return (
     <div className=" px-6 bg-[#F8F6F3]">
-      <div className="container flex py-16 px-6">
+      <div className="container flex pt-16 pb-12 px-6">
         <div className="w-1/2">
           <img src={currentProduct.image} className="w-full" />
         </div>
@@ -24,7 +29,7 @@ export default function ProductDetails() {
               <h1 className="text-[24px] font-merriweather font-bold">
                 £{currentProduct.price}.00
               </h1>
-              <span className="flex justify-center items-center text-gray-500">    
+              <span className="flex justify-center items-center text-gray-500">
                 +Free Shipping
               </span>
             </div>
@@ -67,7 +72,25 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
-      <div className="container px-6"></div>
+      <div className="container px-6 border-t-[2px] flex flex-col gap-4">
+        <div>
+          <ul className="flex ">
+            <li className="p-2 hover:border-t-[5px] hover:border-greenColor hover:pt-1 cursor-pointer font-bold">
+              Description
+            </li>
+            <li className="p-2 hover:border-t-[5px] hover:border-greenColor hover:pt-1 font-bold cursor-pointer" 
+            onClick={toggleInfo}>
+              Reviews(0)
+            </li>
+          </ul>
+        </div>
+        {(reviews && <p>
+          Neque porro quisquam est, qui dolore ipsum quia dolor sit amet,
+          consectetur adipisci velit, sed quia non incidunt lores ta porro ame.
+          numquam eius modi tempora incidunt lores ta porro ame.
+        </p>)}
+
+      </div>
     </div>
   );
 }
