@@ -3,8 +3,11 @@ import ShopNavProduct from "./ShopNavProduct";
 import ShopNavProducts from "../../utils/ShopNavProductsArr";
 import categories from "../../utils/ShopNavCategoriesList";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { FilterContext } from "./FilterProductsContext";
 
 export default function ShopNav() {
+  const {setCategories} = useContext(FilterContext)
   return (
     <div className="shop-nav lg:pe-12 mt-16 lg:mt-0 pb-64 lg:w-1/4 border-r border-gray-300">
       <div className="flex gap-2 pb-8">
@@ -16,7 +19,7 @@ export default function ShopNav() {
       <PriceFilter />
       <div className="mt-4">
         {categories.map((item, index) => (
-          <Link key={index} to={item.link}>
+          <Link key={index} to={item.link} onClick={()=> setCategories(item.category)}>
             <div className="ps-4 flex my-2">
               <h4 className="text-greenColor">{item.category}</h4>
               <span className="ps-2">({item.quantity})</span>
