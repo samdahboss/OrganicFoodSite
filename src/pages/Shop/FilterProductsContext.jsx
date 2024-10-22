@@ -10,7 +10,11 @@ export default function FilterContextProvider({ children }) {
     return product.price >= priceRange[0] && product.price <= priceRange[1]
   };
   const filterCategories = (product) =>{
-    return product.category == category;
+    if (category === ""){
+      return true
+    }else{
+      return product.category == category;
+    }
   }
   return (
     <FilterContext.Provider

@@ -8,7 +8,7 @@ export const ProductsCountContext = createContext();
 
 export default function ProductsCountProvider({ children }) {
     const { sortOrder } = useContext(SortOrderContext);
-    const { handleFilter } = useContext(FilterContext);
+    const { handleFilter, filterCategories } = useContext(FilterContext);
 
     const itemsPerPage = 9;
 
@@ -16,14 +16,17 @@ export default function ProductsCountProvider({ children }) {
  
     const filteredProducts = allProducts.filter(handleFilter);
 
-    const productsOnPage = filteredProducts.slice(
+    const categoryFilter = filteredProducts.filter(filterCategories)
+
+    const productsOnPage = categoryFilter.slice(
         (currentPage - 1) * itemsPerPage,
         currentPage * itemsPerPage
     );
+
   
     const sortedProducts = productsOnPage.sort(sortOrder);
 
-    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+    const totalPages = Math.ceil(categoryFilter.length / itemsPerPage);
     return (
         <ProductsCountContext.Provider
             value={{ currentPage, setCurrentPage, totalPages, sortedProducts }}
