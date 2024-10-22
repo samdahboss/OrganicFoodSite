@@ -37,7 +37,7 @@ const allProducts = [
     },
     {
       image: "/eggs-400x400.jpg",
-      category: "Juice",
+      category: "Juices",
       title: "Farm Fresh Eggs",
       link: "FarmFreshEggs",
       stars: 5,
@@ -48,7 +48,7 @@ const allProducts = [
     },
     {
       image: "/orage-juice-kariz-400x400.jpg",
-      category: "Juice",
+      category: "Juices",
       title: "Fresh Orange Juice",
       link: "FreshOrangeJuice",
       stars: 5,
@@ -59,7 +59,7 @@ const allProducts = [
     },
     {
       image: "/organic-honey-400x400.jpg",
-      category: "Juice",
+      category: "Juices",
       title: "Fresh Organic Honey",
       link: "FreshOrganicHoney",
       stars: 5,
