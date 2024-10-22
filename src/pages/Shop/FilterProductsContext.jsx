@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 export const FilterContext = createContext();
@@ -6,6 +6,9 @@ export const FilterContext = createContext();
 export default function FilterContextProvider({ children }) {
   const [priceRange, setPriceRange] = useState([10, 40]); // Initial price range
   const [category, setCategories] = useState("all")
+  useEffect(()=>{
+    console.log(category)
+  }, [category])
   const handleFilter = (product) => {
     return product.price >= priceRange[0] && product.price <= priceRange[1]
   };
