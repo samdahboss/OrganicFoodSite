@@ -17,11 +17,11 @@ export default function ProductDetails() {
   };
   return (
     <div className=" px-6 bg-[#F8F6F3]">
-      <div className="container flex pt-16 pb-12 px-6">
-        <div className="w-1/2">
+      <div className="container lg:flex pt-16 pb-12 px-6">
+        <div className="lg:w-1/2">
           <img src={currentProduct.image} className="w-full" />
         </div>
-        <div className="w-1/2 ps-12">
+        <div className="lg:w-1/2 ps-12">
           <div className="flex flex-col gap-4">
             <h1 className="text-[30px] font-merriweather font-bold">
               {currentProduct.title}
@@ -106,7 +106,7 @@ export default function ProductDetails() {
             <p>There are no reviews yet.</p>
             <form className="border mt-12 p-6">
               <h1 className="3t4jm">
-                Be the first to review “Assorted Coffee”
+                Be the first to review “Assorted Coffee”1
               </h1>
               <h2>
                 Your email address will not be published. Required fields are
