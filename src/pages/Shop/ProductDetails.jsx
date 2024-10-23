@@ -9,12 +9,12 @@ export default function ProductDetails() {
   const { index } = useParams();
   // const {setCategories} = useContext(FilterContext)
   const currentProduct = allProducts[parseInt(index)];
-  const [reviews, setReviews] = useState(false)
-  const [description, setDescription] = useState(true)
-  const toggleInfo =()=>{
-    setDescription(prevDescription => !prevDescription)
-    setReviews(prevReviews => !prevReviews)
-  }
+  const [reviews, setReviews] = useState(false);
+  const [description, setDescription] = useState(true);
+  const toggleInfo = () => {
+    setDescription((prevDescription) => !prevDescription);
+    setReviews((prevReviews) => !prevReviews);
+  };
   return (
     <div className=" px-6 bg-[#F8F6F3]">
       <div className="container flex pt-16 pb-12 px-6">
@@ -76,25 +76,35 @@ export default function ProductDetails() {
       <div className="container px-6 border-t-[2px] flex flex-col gap-4 pb-12">
         <div>
           <ul className="flex ">
-            <li className="p-2 hover:border-t-[5px] hover:border-greenColor hover:pt-1 cursor-pointer font-bold"
-            onClick={toggleInfo}>
+            <li
+              className="p-2 hover:border-t-[5px] hover:border-greenColor hover:pt-1 cursor-pointer font-bold"
+              onClick={toggleInfo}
+            >
               Description
             </li>
-            <li className="p-2 hover:border-t-[5px] hover:border-greenColor hover:pt-1 font-bold cursor-pointer" 
-            onClick={toggleInfo}>
+            <li
+              className="p-2 hover:border-t-[5px] hover:border-greenColor hover:pt-1 font-bold cursor-pointer"
+              onClick={toggleInfo}
+            >
               Reviews(0)
             </li>
           </ul>
         </div>
-        {(description && <p>
-          Neque porro quisquam est, qui dolore ipsum quia dolor sit amet,
-          consectetur adipisci velit, sed quia non incidunt lores ta porro ame.
-          numquam eius modi tempora incidunt lores ta porro ame.
-        </p>)}
-        {(reviews &&
-          <h1>review</h1>
+        {description && (
+          <p>
+            Neque porro quisquam est, qui dolore ipsum quia dolor sit amet,
+            consectetur adipisci velit, sed quia non incidunt lores ta porro
+            ame. numquam eius modi tempora incidunt lores ta porro ame.
+          </p>
         )}
-
+        {reviews && (
+          <div>
+            <p>There are no reviews yet.</p>
+            <form className="border mt-12 p-6">
+              <h1 className="3t4jm">Be the first to review “Assorted Coffee”</h1>
+            </form>
+          </div>
+        )}
       </div>
     </div>
   );
