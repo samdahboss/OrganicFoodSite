@@ -77,13 +77,17 @@ export default function ProductDetails() {
         <div>
           <ul className="flex box-border ">
             <li
-              className={`p-2 cursor-pointer flex items-end font-bold box-border ${description?"border-greenColor border-t-[5px]":""}`}
+              className={`p-2 cursor-pointer flex items-end font-bold box-border ${
+                description ? "border-greenColor border-t-[5px]" : ""
+              }`}
               onClick={toggleInfo}
             >
               Description
             </li>
             <li
-              className={`p-2 cursor-pointer flex items-end box-border font-bold ${reviews?"border-greenColor border-t-[5px]":""}`}
+              className={`p-2 cursor-pointer flex items-end box-border font-bold ${
+                reviews ? "border-greenColor border-t-[5px]" : ""
+              }`}
               onClick={toggleInfo}
             >
               Reviews(0)
@@ -101,7 +105,13 @@ export default function ProductDetails() {
           <div>
             <p>There are no reviews yet.</p>
             <form className="border mt-12 p-6">
-              <h1 className="3t4jm">Be the first to review “Assorted Coffee”</h1>
+              <h1 className="3t4jm">
+                Be the first to review “Assorted Coffee”
+              </h1>
+              <h2>
+                Your email address will not be published. Required fields are
+                marked *
+              </h2>
             </form>
           </div>
         )}
