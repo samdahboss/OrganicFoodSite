@@ -75,15 +75,15 @@ export default function ProductDetails() {
       </div>
       <div className="container px-6 border-t-[2px] flex flex-col gap-4 pb-12">
         <div>
-          <ul className="flex ">
+          <ul className="flex box-border ">
             <li
-              className="p-2 hover:border-t-[5px] hover:border-greenColor hover:pt-1 cursor-pointer font-bold"
+              className={`p-2 cursor-pointer flex items-end font-bold box-border ${description?"border-greenColor border-t-[5px]":""}`}
               onClick={toggleInfo}
             >
               Description
             </li>
             <li
-              className="p-2 hover:border-t-[5px] hover:border-greenColor hover:pt-1 font-bold cursor-pointer"
+              className={`p-2 cursor-pointer flex items-end box-border font-bold ${reviews?"border-greenColor border-t-[5px]":""}`}
               onClick={toggleInfo}
             >
               Reviews(0)
