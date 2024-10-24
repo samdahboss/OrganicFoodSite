@@ -1,18 +1,20 @@
 import ProductDetailsLanding from "./ProductDetailsLanding";
 import UserReview from "./UserReview";
 import { useState } from "react";
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import SelectDetailView from "./SelectDetailView";
 import allProducts from "../../utils/AllProducts";
+import RelatedProducts from "./RelatedProducts";
 
 export default function ProductDetails() {
   const { index } = useParams();
   const currentProduct = allProducts[parseInt(index)];
   const [reviews, setReviews] = useState(false);
   const [description, setDescription] = useState(true);
+  
   return (
     <div className=" px-6 bg-[#F8F6F3]">
-      <ProductDetailsLanding  currentProduct={currentProduct}/>
+      <ProductDetailsLanding currentProduct={currentProduct} />
       <div className="container px-6 border-t-[2px] flex flex-col gap-4 pb-12">
         <SelectDetailView
           description={description}
@@ -27,7 +29,13 @@ export default function ProductDetails() {
             ame. numquam eius modi tempora incidunt lores ta porro ame.
           </p>
         )}
-        {reviews && <UserReview currentProduct={currentProduct}/>}
+        {reviews && <UserReview currentProduct={currentProduct} />}
+      </div>
+      <div className="container px-6 py-12 flex flex-col gap-8">
+        <h1 className="font-bold text-[34px] font-merriweather">
+          Related products
+        </h1>
+        <RelatedProducts/>
       </div>
     </div>
   );
