@@ -1,11 +1,13 @@
 import { FaRegStar } from "react-icons/fa";
-export default function UserReview() {
+import PropTypes from 'prop-types';
+
+export default function UserReview({currentProduct}) {
   return (
     <div>
       <p>There are no reviews yet.</p>
       <form className="border-[1px] mt-12 p-6 flex flex-col gap-4 text-gray-700">
         <h1 className="text-[22px]">
-          Be the first to review “Assorted Coffee”
+          Be the first to review “{currentProduct.title}”
         </h1>
         <h2>
           Your email address will not be published. Required fields are marked *
@@ -54,4 +56,8 @@ export default function UserReview() {
       </form>
     </div>
   );
+}
+
+UserReview.propTypes ={
+  currentProduct: PropTypes.object
 }

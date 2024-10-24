@@ -27,7 +27,7 @@ export default function ProductDetails() {
             ame. numquam eius modi tempora incidunt lores ta porro ame.
           </p>
         )}
-        {reviews && <UserReview />}
+        {reviews && <UserReview currentProduct={currentProduct}/>}
       </div>
     </div>
   );
