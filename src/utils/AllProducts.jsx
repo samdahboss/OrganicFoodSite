@@ -26,6 +26,7 @@ const allProducts = [
       category: "Groceries",
       title: "Diabetic Cookies",
       oldPrice: 35,
+      stars: 5,
       price: 25,
       sale: true,
       popularity: 1.5,
@@ -88,6 +89,7 @@ const allProducts = [
       title: "Natural Extracted Edible Oil",
       oldPrice:34,
       price: 25,
+      stars: 5,
       sale: true,
       popularity: 4.1,
       rating: 1.9,
@@ -98,6 +100,7 @@ const allProducts = [
       category: "Groceries",
       title: "Organic Face Scrub",
       price: 35,
+      stars: 5,
       popularity: 4.9,
       rating: 3.7,
       releaseDate: 34
@@ -108,6 +111,7 @@ const allProducts = [
       title: "Pulses From Organic Farm",
       price: 15,
       popularity: 4.4,
+      stars: 5,
       rating: 2.6,
       releaseDate: 34
     },
@@ -116,6 +120,7 @@ const allProducts = [
       category: "Groceries",
       title: "Wheat From Organic Farm",
       price: 34,
+      stars: 5,
       popularity: 1.8,
       rating: 1.8,
       releaseDate: 34

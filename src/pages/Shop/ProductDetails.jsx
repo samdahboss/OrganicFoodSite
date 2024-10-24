@@ -35,7 +35,7 @@ export default function ProductDetails() {
         <h1 className="font-bold text-[34px] font-merriweather">
           Related products
         </h1>
-        <RelatedProducts/>
+        <RelatedProducts productIndex={parseInt(index)}/>
       </div>
     </div>
   );
