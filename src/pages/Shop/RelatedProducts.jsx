@@ -14,15 +14,7 @@ export default function RelatedProducts() {
         const relatedProduct = allProducts[item];
         return (
           <Link to={{ pathname: `/product/${item}` }} key={index}>
-            <ProductCard
-              image={relatedProduct.image}
-              category={relatedProduct.category}
-              title={relatedProduct.title}
-              stars={5}
-              price={relatedProduct.price}
-              sale={relatedProduct.sale}
-              oldPrice={relatedProduct.oldPrice}
-            />
+            <ProductCard {...relatedProduct} />
           </Link>
         );
       })}
