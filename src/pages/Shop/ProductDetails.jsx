@@ -1,13 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import categories from "../../utils/ShopNavCategoriesList";
 import allProducts from "../../utils/AllProducts";
-// import { useContext } from "react";
-// import { FilterContext } from "./FilterProductsContext";
+import { FaRegStar } from "react-icons/fa";
 import { useState } from "react";
 
 export default function ProductDetails() {
   const { index } = useParams();
-  // const {setCategories} = useContext(FilterContext)
   const currentProduct = allProducts[parseInt(index)];
   const [reviews, setReviews] = useState(false);
   const [description, setDescription] = useState(true);
@@ -21,7 +19,7 @@ export default function ProductDetails() {
         <div className="lg:w-1/2">
           <img src={currentProduct.image} className="w-full" />
         </div>
-        <div className="lg:w-1/2 ps-12">
+        <div className="lg:w-1/2 lg:ps-12">
           <div className="flex flex-col gap-4">
             <h1 className="text-[30px] font-merriweather font-bold">
               {currentProduct.title}
@@ -104,14 +102,46 @@ export default function ProductDetails() {
         {reviews && (
           <div>
             <p>There are no reviews yet.</p>
-            <form className="border mt-12 p-6">
-              <h1 className="3t4jm">
-                Be the first to review “Assorted Coffee”1
+            <form className="border-[1px] mt-12 p-6 flex flex-col gap-4 text-gray-700">
+              <h1 className="text-[22px]">
+                Be the first to review “Assorted Coffee”
               </h1>
               <h2>
                 Your email address will not be published. Required fields are
                 marked *
               </h2>
+              <div className="flex">
+                <label className="text-[21px]" htmlFor="rating">Your rating*</label>
+                <div className="flex items-center" id="rating">
+                  <span className=" text-lg flex">
+                    {Array(5)
+                      .fill(<FaRegStar />)
+                      .map((star, index) => (
+                        <span key={index}>{star}</span>
+                      ))}
+                  </span>
+                </div>
+              </div>
+              <div className="">
+                <label className="text-[21px]" htmlFor="review">Your Review*</label>
+                <textarea className="w-full h-20 border-dotted border-[1px] outline-none p-3" id="review"></textarea>
+              </div>
+              <div className="lg:flex gap-4">
+                <div className="lg:w-1/2 flex flex-col">
+                  <label htmlFor="name">Name*</label>
+                  <input id="name" className="outline-0  p-4" />
+                </div>
+                <div className="lg:w-1/2 flex flex-col">
+                  <label htmlFor="email">Email*</label>
+                  <input id="email" className="outline-0 p-4" />
+                </div>
+              </div>
+              <label htmlFor="checkbox" className="gap-2 flex">
+                <input type="checkbox" id="checkbox"/>
+                Save my name, email, and website in this browser for the next
+                time I comment.
+              </label>
+              <button className="w-[150px] rounded-lg bg-greenColor text-white p-3 text-sm font-semibold">SUBMIT</button>
             </form>
           </div>
         )}
