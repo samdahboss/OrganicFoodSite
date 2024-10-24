@@ -106,7 +106,7 @@ export default function ProductDetails() {
             <p>There are no reviews yet.</p>
             <form className="border mt-12 p-6">
               <h1 className="3t4jm">
-                Be the first tko review “Assorted Coffee”1
+                Be the first to review “Assorted Coffee”1
               </h1>
               <h2>
                 Your email address will not be published. Required fields are
