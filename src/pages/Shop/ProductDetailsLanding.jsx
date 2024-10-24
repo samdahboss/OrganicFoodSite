@@ -1,10 +1,10 @@
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import categories from "../../utils/ShopNavCategoriesList";
-import allProducts from "../../utils/AllProducts";
+import PropTypes from 'prop-types'
 
-export default function ProductDetailsLanding() {
-    const { index } = useParams();
-  const currentProduct = allProducts[parseInt(index)];
+
+export default function ProductDetailsLanding({currentProduct}) {
+   
   return (
     <div className="container lg:flex pt-16 pb-12 px-6">
         <div className="lg:w-1/2">
@@ -63,4 +63,8 @@ export default function ProductDetailsLanding() {
         </div>
       </div>
   )
+}
+
+ProductDetailsLanding.propTypes ={
+  currentProduct: PropTypes.object
 }

@@ -1,14 +1,18 @@
 import ProductDetailsLanding from "./ProductDetailsLanding";
 import UserReview from "./UserReview";
 import { useState } from "react";
+import { useParams} from "react-router-dom";
 import SelectDetailView from "./SelectDetailView";
+import allProducts from "../../utils/AllProducts";
 
 export default function ProductDetails() {
+  const { index } = useParams();
+  const currentProduct = allProducts[parseInt(index)];
   const [reviews, setReviews] = useState(false);
   const [description, setDescription] = useState(true);
   return (
     <div className=" px-6 bg-[#F8F6F3]">
-      <ProductDetailsLanding />
+      <ProductDetailsLanding  currentProduct={currentProduct}/>
       <div className="container px-6 border-t-[2px] flex flex-col gap-4 pb-12">
         <SelectDetailView
           description={description}
