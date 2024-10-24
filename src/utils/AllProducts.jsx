@@ -12,7 +12,7 @@ const allProducts = [
     },
     {
       image: "/cashew-butter.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/cashew-butter-500.jpg",
       category: "Groceries",
       title: "Cashew Butter",
       stars: 5,
@@ -25,7 +25,7 @@ const allProducts = [
     },
     {
       image: "/diabetic-cookies-400x400.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/diabetic-cookies.jpg",
       category: "Groceries",
       title: "Diabetic Cookies",
       oldPrice: 35,
@@ -38,7 +38,7 @@ const allProducts = [
     },
     {
       image: "/eggs-400x400.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/eggs.jpg",
       category: "Juices",
       title: "Farm Fresh Eggs",
       stars: 5,
@@ -49,7 +49,7 @@ const allProducts = [
     },
     {
       image: "/orage-juice-kariz-400x400.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/orage-juice-kariz.jpg",
       category: "Juices",
       title: "Fresh Orange Juice",
       stars: 5,
@@ -60,7 +60,7 @@ const allProducts = [
     },
     {
       image: "/organic-honey-400x400.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/organic-honey.jpg",
       category: "Juices",
       title: "Fresh Organic Honey",
       stars: 5,
@@ -71,7 +71,7 @@ const allProducts = [
     },
     {
       image: "/best-seller-2.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/sanitizer.jpg",
       category: "Groceries",
       title: "Hand Sanitizer",
       stars: 5,
@@ -82,7 +82,7 @@ const allProducts = [
     },
     {
       image: "/best-seller-3.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/red-chillies.jpg",
       category: "Groceries",
       title: "Handpicked Red Chillies",
       stars: 5,
@@ -93,7 +93,7 @@ const allProducts = [
     },
     {
       image: "/best-seller-4.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/edible-oil.jpg",
       category: "Groceries",
       title: "Natural Extracted Edible Oil",
       oldPrice:34,
@@ -106,7 +106,7 @@ const allProducts = [
     },
     {
       image: "/face-wash-400x400.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/face-wash.jpg",
       category: "Groceries",
       title: "Organic Face Scrub",
       price: 35,
@@ -117,7 +117,7 @@ const allProducts = [
     },
     {
       image: "/pulses-400x400.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/pulses.jpg",
       category: "Groceries",
       title: "Pulses From Organic Farm",
       price: 15,
@@ -128,7 +128,7 @@ const allProducts = [
     },
     {
       image: "/wheat-400x400.jpg",
-      lgImage: "/coffee-asorted.jpg",
+      lgImage: "/wheat.jpg",
       category: "Groceries",
       title: "Wheat From Organic Farm",
       price: 34,
