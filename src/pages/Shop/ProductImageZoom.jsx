@@ -23,7 +23,7 @@ export default function ProductImageZoom({ currentProduct }) {
         zoomPreload={true}
         hideHint={true}
       />
-      {open && <BasicModal />}
+      {open && <BasicModal currentProduct={currentProduct}/>}
     </div>
   );
 }
