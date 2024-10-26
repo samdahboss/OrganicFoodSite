@@ -5,6 +5,7 @@ const BestSalesProducts = [
       title: "Assorted Coffee",
       stars: 5,
       price: 35,
+      index:0
     },
     {
       image: "/best-seller-2.jpg",
@@ -12,6 +13,7 @@ const BestSalesProducts = [
       title: "Hand Sanitizer",
       stars: 5,
       price: 15,
+      index:6
     },
     {
       image: "/best-seller-3.jpg",
@@ -19,6 +21,7 @@ const BestSalesProducts = [
       title: "Handpicked Red Chillies",
       stars: 5,
       price: 19,
+      index: 7
     },
     {
       image: "/best-seller-4.jpg",
@@ -26,6 +29,7 @@ const BestSalesProducts = [
       title: "Natural Extracted Edible Oil",
       stars: 5,
       price:  25,
+      index:8
     },
   ]
 
