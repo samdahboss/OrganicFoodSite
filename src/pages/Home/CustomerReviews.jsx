@@ -2,6 +2,7 @@ import SectionTitle from "../../components/SectionTitle";
 import { FaShoppingCart, FaStar } from "react-icons/fa";
 import PropTypes from "prop-types";
 import reviews from '../../utils/HomeCustomerReviews'
+import {Link} from 'react-router-dom'
 
 export function Review({ image, name, stars, review }) {
   return (
@@ -47,9 +48,12 @@ export default function CustomerReviews() {
               <p>
                 I am text block. Click edit button to change this tex em ips.
               </p>
+              <Link to="/shop">
               <button className="bg-darkGreenColor hover:bg-greenColor w-[190px] lg:w-auto mx-auto text-white flex gap-2 items-center py-3 px-6 rounded-lg font-semibold">
                 <FaShoppingCart size={18} /> SHOP NOW
               </button>
+              </Link>
+              
             </div>
           </div>
           <Review {...reviews[1]} />

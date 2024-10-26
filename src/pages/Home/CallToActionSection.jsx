@@ -1,4 +1,5 @@
 import { FaShoppingCart } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 export default function CallToActionSection() {
   return (
     <section>
@@ -7,9 +8,12 @@ export default function CallToActionSection() {
           <h1 className="lg:text-4xl text-2xl font-semibold text-white">
             Get 25% Off On Your First Purchase!
           </h1>
+          <Link to="/shop">
           <button className="bg-darkGreenColor hover:bg-greenColor w-[190px] lg:w-auto text-white flex gap-2 items-center py-3 px-6 rounded-lg font-semibold">
             <FaShoppingCart size={18} /> SHOP NOW
           </button>
+          </Link>
+          
         </div>
       </div>
       <div className="call-to-action bg-[#F8F6F3] texx-white  py-4">
