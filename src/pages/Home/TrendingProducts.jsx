@@ -1,6 +1,8 @@
 import SectionTitle from "../../components/SectionTitle";
 import ProductCard from "../../components/ProductCard";  
 import TrendingProductsArr from '../../utils/TrendingProductsArr'
+// import { Link } from "react-router-dom";
+
 export default function TrendingProducts() {
     
   return (
