@@ -1,6 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+// import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 
 const style = {
@@ -32,6 +33,9 @@ export default function BasicModal({ currentProduct }) {
             style={{ width: "100%", borderRadius: 8 }}
           />
         </Box>
+        {/* <Typography>
+          {currentProduct.title}
+        </Typography> */}
       </Modal>
     </div>
   );
