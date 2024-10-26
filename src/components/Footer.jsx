@@ -1,37 +1,5 @@
-import PropTypes from "prop-types";
-
-export const LinkList = ({ title, links }) => (
-  <div className="flex flex-col">
-    <h3 className="text-[22px] text-white font-semibold font-merriweather mb-4 lg:mb-12">
-      {title}
-    </h3>
-    <ul className="list-none">
-      {links.map((link, index) => (
-        <li key={index}>
-          <a href="#">{link}</a>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
-
-LinkList.propTypes = {
-  title: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
-
-export const ImageButton = ({ imgSrc, altText }) => (
-  <button className="text-white rounded-md">
-    <a href="#">
-      <img src={imgSrc} alt={altText} className="w-[150px]" />
-    </a>
-  </button>
-);
-
-ImageButton.propTypes = {
-  imgSrc: PropTypes.string.isRequired,
-  altText: PropTypes.string.isRequired,
-};
+import ImageButton  from "./ImageButton";
+import LinkList from "./LinkList";
 
 export default function Footer() {
   const quickLinks = [
