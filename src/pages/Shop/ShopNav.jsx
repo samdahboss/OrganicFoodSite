@@ -19,8 +19,8 @@ export default function ShopNav() {
       <PriceFilter />
       <div className="mt-4">
         {categories.map((item, index) => (
-          <Link key={index} to={item.link} onClick={()=> {setCategories(item.category)}}>
-            <div className="ps-4 flex my-2">
+          <Link key={index} to={item.link}>
+            <div className="ps-4 flex my-2" onClick={()=> {setCategories(item.category)}}>
               <h4 className="text-greenColor">{item.category}</h4>
               <span className="ps-2">({item.quantity})</span>
             </div>

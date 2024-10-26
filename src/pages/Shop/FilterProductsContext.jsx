@@ -9,6 +9,7 @@ export default function FilterContextProvider({ children }) {
   useEffect(()=>{
     console.log(category)
   }, [category])
+  
   const handleFilter = (product) => {
     return product.price >= priceRange[0] && product.price <= priceRange[1]
   };
