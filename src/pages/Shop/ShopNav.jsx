@@ -11,7 +11,7 @@ export default function ShopNav() {
   return (
     <div className="shop-nav lg:pe-12 mt-16 lg:mt-0 pb-64 lg:w-1/4 border-r border-gray-300">
       <div className="flex gap-2 pb-8">
-        <input className="p-1 w-5/6" placeholder="Search Products..." />
+        <input className="p-1 w-5/6" placeholder="Search Products...." />
         <button className="bg-darkGreenColor w-1/6 hover:bg-greenColor text-white p-2 rounded-lg">
           {">"}
         </button>
